@@ -42,7 +42,7 @@ export default function NavPills(props) {
       }}
       value={active}
       onChange={handleChange}
-      centered={alignCenter}
+      centered
     >
       {tabs.map((prop, key) => {
         var icon = {};
