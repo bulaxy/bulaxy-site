@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
@@ -34,7 +33,11 @@ function InterestProfile() {
 					<b>Boardgames</b>
 				</Grid>
 				<Grid item xs={10} style={{ textAlign: 'justify' }}>
-					
+					Most people have played some boardgames sometime in their live. Ranging from games like Catan,
+					 Ticket to Ride to Card Against Humanity, Werewolf. Personally, I engoy games that are streagy 
+					 based and/or 2 players games. Currently, my favorites are <a href='https://boardgamegeek.com/boardgame/108745/seasons'>Seasons</a>, 
+					  <a href='https://boardgamegeek.com/boardgame/98778/hanabi'> Hanabi</a>, <a href='https://boardgamegeek.com/boardgame/167791/terraforming-mars'>
+					Terraforming Mars</a>. I am no expert in any of them and every games, I always found room to improve! 
 				</Grid>
 			</Grid>
 			<Grid container spacing={2}>

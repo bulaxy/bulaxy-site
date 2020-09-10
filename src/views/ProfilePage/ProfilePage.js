@@ -19,12 +19,16 @@ import HeaderLinks from "../../components/header/HeaderLinks.js";
 import NavPills from "../../components/NavPills/NavPills.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
-import profile from "../../assets/img/faces/christian.jpg";
+import profile from "../../assets/img/faces/roger.png";
 import InterestProfile from './InterestProfile'
 import WorkProfile from './WorkProfile'
 import ValuesProfile from './ValuesProfile'
 import withWidth from '@material-ui/core/withWidth';
 import styles from "../../assets/jss/material-kit-react/views/profilePage.js";
+import { Github } from '@styled-icons/boxicons-logos/Github'
+import { TelephoneFill } from '@styled-icons/bootstrap/TelephoneFill'
+import { Mail } from '@styled-icons/entypo/Mail'
+import { Linkedin } from '@styled-icons/entypo-social/Linkedin'
 const useStyles = makeStyles(styles);
 
 function ProfilePage(props) {
@@ -40,7 +44,7 @@ function ProfilePage(props) {
 		<div>
 			<Header
 				color="transparent"
-				brand="Material Kit React"
+				brand="Bulaxy Site"
 				rightLinks={<HeaderLinks />}
 				fixed
 				changeColorOnScroll={{
@@ -49,7 +53,7 @@ function ProfilePage(props) {
 				}}
 				{...rest}
 			/>
-			<Parallax small filter image={require("../../assets/img/bg_cube_adjusted.jpg")} />
+			<Parallax small filter image={require("../../assets/img/bg_cube_adjusted-min.jpg")} />
 			<div className={classNames(classes.main, classes.mainRaised)}>
 				<div>
 					<div className={classes.container}>
@@ -62,14 +66,17 @@ function ProfilePage(props) {
 									<div className={classes.name}>
 										<h3 className={classes.title}>Roger Hiu Fung Cheng</h3>
 										<h6>Developer</h6>
-										<Button justIcon link className={classes.margin5}>
-											<i className={"fab fa-twitter"} />
+										<Button href='https://github.com/bulaxy' justIcon link className={classes.margin5}>
+											<Github />
 										</Button>
-										<Button justIcon link className={classes.margin5}>
-											<i className={"fab fa-instagram"} />
+										<Button href='https://au.linkedin.com/in/hiu-fung-roger-cheng-75815a142' justIcon link className={classes.margin5}>
+											<Linkedin />
 										</Button>
-										<Button justIcon link className={classes.margin5}>
-											<i className={"fab fa-facebook"} />
+										<Button href='mailto:rogerhiufungcheng@gmail.com' justIcon link className={classes.margin5}>
+											<Mail />
+										</Button>
+										<Button href='tel:+61470642637' justIcon link className={classes.margin5}>
+											<TelephoneFill />
 										</Button>
 									</div>
 								</div>

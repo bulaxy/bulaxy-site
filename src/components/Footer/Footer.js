@@ -32,44 +32,44 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a
+              {/* <a
                 href="https://www.creative-tim.com/?ref=mkr-footer"
                 className={classes.block}
                 target="_blank"
               >
                 Creative Tim
-              </a>
+              </a> */}
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
+              {/* <a
                 href="https://www.creative-tim.com/presentation?ref=mkr-footer"
                 className={classes.block}
                 target="_blank"
               >
                 About us
-              </a>
+              </a> */}
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
+              {/* <a
                 href="http://blog.creative-tim.com/?ref=mkr-footer"
                 className={classes.block}
                 target="_blank"
               >
                 Blog
-              </a>
+              </a> */}
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
+              {/* <a
                 href="https://www.creative-tim.com/license?ref=mkr-footer"
                 className={classes.block}
                 target="_blank"
               >
                 Licenses
-              </a>
+              </a> */}
             </ListItem>
           </List>
         </div>
-        <div className={classes.right}>
+        {/* <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made with{" "}
           <Favorite className={classes.icon} /> by{" "}
           <a
@@ -80,7 +80,7 @@ export default function Footer(props) {
             Creative Tim
           </a>{" "}
           for a better web.
-        </div>
+        </div> */}
       </div>
     </footer>
   );
