@@ -29,6 +29,7 @@ import { Github } from '@styled-icons/boxicons-logos/Github'
 import { TelephoneFill } from '@styled-icons/bootstrap/TelephoneFill'
 import { Mail } from '@styled-icons/entypo/Mail'
 import { Linkedin } from '@styled-icons/entypo-social/Linkedin'
+import { bgCubeMin } from '../../constants/images'
 const useStyles = makeStyles(styles);
 
 function ProfilePage(props) {
@@ -53,7 +54,7 @@ function ProfilePage(props) {
 				}}
 				{...rest}
 			/>
-			<Parallax small filter image={require("../../assets/img/bg_cube_adjusted-min.jpg")} />
+			<Parallax small filter image={bgCubeMin} />
 			<div className={classNames(classes.main, classes.mainRaised)}>
 				<div>
 					<div className={classes.container}>
