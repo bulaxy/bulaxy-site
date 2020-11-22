@@ -45,7 +45,10 @@ function InterestProfile() {
 					<b>Hiking</b>
 				</Grid>
 				<Grid item xs={10} style={{ textAlign: 'justify' }}>
-					
+					Before Covid-19, I go hiking once every fortnight, either doing a few laps in Glasgow track in Dandenong Ranges
+					or other day hikes like in Wilsons Promontory Nation Park, Lerderderg State Park. I am not a very experienced hiker, but 
+					I am expending my trails and exploring more tracks as days goes! Welcome to drop me a message or any trail you would like to 
+					recommends!
 				</Grid>
 			</Grid>
 		</div>
