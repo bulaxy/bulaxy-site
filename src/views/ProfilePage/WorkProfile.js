@@ -1,164 +1,91 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Timeline from '@material-ui/lab/Timeline';
-import TimelineNode from '../../components/Timeline/TimelineNode'
-import { infinitee, serenity, ricepaperroll } from '../../constants/images'
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import { infinitee, serenity, rollingfun, msnh, campion, micem, cbs } from '../../constants/images'
+import ExpendableTimelineNode from '../../components/Timeline/ExpendableTimelineNode';
+import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: '6px 16px',
-  },
-  secondaryTail: {
-    backgroundColor: theme.palette.secondary.main,
+  containerRoot: {
+    maxHeight: '600px'
   },
 }));
-
-export default function CustomizedTimeline() {
+export default function WorkProfile() {
   const classes = useStyles();
-
   return (
-    <Timeline align="alternate">
-      <TimelineNode img={serenity} oppositeText="Oct 2019 - Present">
-        <Typography variant="h5" component="h1">
-          IT Business Support
-        </Typography>
-        <Typography variant="h6" component="h2">
-          Serenity Life Balance
-        </Typography>
-        <Typography variant="subtitle1" component="h3">
-          Key Duties/Tasks
-        </Typography>
-        <Typography display="block" align='left' variant="body1" component="body1">
-          <List>
-            <ListItem dense>
-              <ListItemText primary="Provide IT advice and consultation for Serenity Life Balance" />
-            </ListItem>
-            <ListItem dense>
-              <ListItemText primary="Provide Individual IT support for external customers" />
-            </ListItem>
-            <ListItem dense>
-              <ListItemText primary="Organisze computer lessons for customers" />
-            </ListItem>
-          </List>
-        </Typography>
-      </TimelineNode>
-
-      <TimelineNode img={infinitee} oppositeText="Oct 2019 - Nov 2020">
-        <Typography variant="h5" component="h1">
-          Software and Applications Developer
-        </Typography>
-        <Typography variant="h6" component="h2">
-          Infinitee Software
-        </Typography>
-        <Typography variant="subtitle1" component="h3">
-          Key Duties/Tasks
-        </Typography>
-        <Typography display="block" align='left' variant="body1" component="body1">
-          <List>
-            <ListItem dense>
-              <ListItemText primary="Design and develop Mobile Applications for both phone and tablet apps using React-Native" />
-            </ListItem>
-            <ListItem dense>
-              <ListItemText primary="Conducting research into new SDKs, Modules and library for in-house platform" />
-            </ListItem>
-            <ListItem dense>
-              <ListItemText primary="Design and develop server side code on NodeJs and SQL database" />
-            </ListItem>
-          </List>
-        </Typography>
-      </TimelineNode>
-
-      <TimelineNode img={ricepaperroll} oppositeText="Sep 2019 - July 2020">
-        <Typography variant="h5" component="h1">
-          Web Developer (Contractor)
-        </Typography>
-        <Typography variant="h6" component="h2">
-          TindoLand
-        </Typography>
-        <Typography variant="subtitle1" component="h3">
-          Key Duties/Tasks
-        </Typography>
-        <Typography display="block" align='left' variant="body1" component="body1">
-          <List>
-            <ListItem dense>
-              <ListItemText primary="Develop and enchant RicePaperRoll website" />
-            </ListItem>
-          </List>
-        </Typography>
-      </TimelineNode>
-      <TimelineNode oppositeText="Nov 2020">
-        <Typography variant="h5" component="h1">
-          IT Tutor for Senior (Volunteer)
-        </Typography>
-        <Typography variant="h6" component="h2">
-          Mount Street Neighborhood House
-        </Typography>
-        <Typography variant="subtitle1" component="h3">
-          Key Duties/Tasks
-        </Typography>
-        <Typography display="block" align='left' variant="body1" component="body1">
-          <List>
-            <ListItem dense>
-              <ListItemText primary="Prepare material for Senior IT Lessons" />
-            </ListItem>
-            <ListItem dense>
-              <ListItemText primary="Provide face-to-face basic IT tutorial/teaching sessions to seniors" />
-            </ListItem>
-          </List>
-        </Typography>
-      </TimelineNode>
-
-      <TimelineNode oppositeText="Nov 2020">
-        <Typography variant="h5" component="h1">
-          IT Tutor for Senior (Volunteer)
-        </Typography>
-        <Typography variant="h6" component="h2">
-          Mount Street Neighborhood House
-        </Typography>
-        <Typography variant="subtitle1" component="h3">
-          Key Duties/Tasks
-        </Typography>
-        <Typography display="block" align='left' variant="body1" component="body1">
-          <List>
-            <ListItem dense>
-              <ListItemText primary="Prepare material for Senior IT Lessons" />
-            </ListItem>
-            <ListItem dense>
-              <ListItemText primary="Provide face-to-face basic IT tutorial/teaching sessions to seniors" />
-            </ListItem>
-          </List>
-        </Typography>
-      </TimelineNode>
-
-      <TimelineNode oppositeText="Dec 2013 - Jan 2014">
-        <Typography variant="h5" component="h1">
-          Pick and Packer
-        </Typography>
-        <Typography variant="h6" component="h2">
-          Campion Eduication
-        </Typography>
-      </TimelineNode>
-
-      <TimelineNode oppositeText="Dec 2012 - Jan 2013">
-        <Typography variant="h5" component="h1">
-          Waiter
-        </Typography>
-        <Typography variant="h6" component="h2">
-          China Bar Signature (Burwood)
-        </Typography>
-      </TimelineNode>
-
-      <TimelineNode oppositeText="June 2012">
-        <Typography variant="h5" component="h1">
-          Office Helper (Work Experience Program)
-        </Typography>
-        <Typography variant="h6" component="h2">
-          Migrant Information Center (Box Hill)
-        </Typography>
-      </TimelineNode>
-    </Timeline>
+    <Container className={classes.containerRoot} maxWidth={false} disableGutters>
+      <Timeline align="alternate">
+        <ExpendableTimelineNode
+          title="IT Business Support"
+          subtitle="Serenity Life Balance"
+          content={{
+            title: 'Key Duties/Tasks',
+            items: [
+              "Provide IT advice and consultation for Serenity Life Balance",
+              "Provide Individual IT support for external customers",
+              "Organisze computer lessons for customers"
+            ]
+          }}
+          img={serenity}
+          date="Oct 2019 - Present"
+        />
+        <ExpendableTimelineNode
+          title="Software and Applications Developer"
+          subtitle="Infinitee Software"
+          content={{
+            title: 'Key Duties/Tasks',
+            items: [
+              "Design and develop Mobile Applications for both phone and tablet apps using React-Native",
+              "Conducting research into new SDKs, Modules and library for in-house platform",
+              "Design and develop server side code on NodeJs and SQL database"
+            ]
+          }}
+          img={infinitee}
+          date="Oct 2019 - Nov 2020"
+        />
+        <ExpendableTimelineNode
+          title="Web Developer (Contractor)"
+          subtitle="TindoLand"
+          content={{
+            title: 'Key Duties/Tasks',
+            items: [
+              "Develop and enchant RicePaperRoll website"
+            ]
+          }}
+          img={rollingfun}
+          date="Sep 2019 - July 2020"
+        />
+        <ExpendableTimelineNode
+          title="IT Tutor for Senior (Volunteer)"
+          subtitle="Mount Street Neighborhood House"
+          content={{
+            title: 'Key Duties/Tasks',
+            items: [
+              "Prepare material for Senior IT Lessons",
+              "Provide face-to-face basic IT tutorial/teaching sessions to seniors"
+            ]
+          }}
+          img={msnh}
+          date="Nov 2020"
+        />
+        <ExpendableTimelineNode
+          title="Pick and Packer"
+          subtitle="Campion Eduication"
+          img={campion}
+          date="Dec 2013 - Jan 2014"
+        />
+        <ExpendableTimelineNode
+          title="Waiter"
+          subtitle="China Bar Signature (Burwood)"
+          img={cbs}
+          date="Dec 2012 - Jan 2013"
+        />
+        <ExpendableTimelineNode
+          title="Office Helper (Work Experience Program)"
+          subtitle="Migrant Information Center (Eastern Melbourne)"
+          img={micem}
+          date="June 2012"
+        />
+      </Timeline >
+    </Container>
   );
 }
